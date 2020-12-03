@@ -1,0 +1,72 @@
+.footer{
+    background-color: currentcolor;
+    width: 100%;
+    height: 250px;
+    padding: 45px 50px;
+    h2{
+        color: white;
+        font-size: 25px;
+        font-weight: lighter;
+    }
+    .rutas{
+        a{
+            text-decoration: none;
+            color: cornflowerblue;
+            font-size: 15px;
+        }
+    }
+    .redes-sociales{
+        img{
+            width: 15%;
+            border-radius: 50px;
+            margin-left: 5%;
+            margin-top: 30px;
+        }
+    }
+}
+.copyright{
+    background-color: #000000de;
+    width: 100%;
+    height: 50px;
+    margin: 0;
+    padding: 12px 0px;
+    p{
+        text-align: center;
+        color: #DB0074;
+        font-size: 18px;
+        margin: 0;
+    }
+    
+        .inicia{
+            p{
+                color: white;
+                font-size: 20px;
+                margin-top: 15px;
+                text-align: center;
+            }
+            width: 65.2%;
+            height: 65px;
+            background-color: #DB0074;
+            margin-top: 50px;
+            margin-left: 17%;
+            border-radius: 10px;
+            border: 1px solid #707070;
+        }
+        .registra{
+            p{
+                color: white;
+                font-size: 20px;
+                margin-top: 15px;
+                text-align: center;
+            }
+            width: 65.2%;
+            height: 65px;
+            background-color: #EBAC11;
+            margin-top: 50px;
+            margin-left: 17%;
+            border-radius: 10px;
+            border: 1px solid #707070;
+        }
+    
+}
+

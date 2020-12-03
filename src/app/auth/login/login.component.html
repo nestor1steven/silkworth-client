@@ -1,0 +1,80 @@
+<!-- <?php
+
+session_start();
+require_once 'includes/conexion.php';
+include_once 'includes/helpers.php';
+require_once 'config/parameters.php';
+require_once 'helpers/utils.php';
+
+error_reporting(0);
+$carrito = $_SESSION['carrito'];   
+$libros = conseguirProductos($db); 
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+
+<body>
+    <header class="header-meditacion">
+        <?php require_once 'includes/menu.php'?>
+    </header> -->
+
+    <section class="main">
+        <div class="iniciar-sesion row">
+            <div class="col-md-6 sidebar">
+
+
+                <h2>Iniciar Sesion</h2>
+                <hr>
+
+                <!-- <?php if(isset($_SESSION['error_login'])):?>
+                <div class="errorlogin">
+                    <?="<h3>".$_SESSION['error_login']."</h3>";?>
+                </div>
+                <?php endif;?> -->
+
+                <form  method="POST">
+                    <div class="form-group">
+                        <label for="exampleInputEmail1">Correo Electronico</label>
+                        <input name="email" type="email" class="form-control" id="exampleInputEmail1"
+                            aria-describedby="emailHelp" placeholder="">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Contraseña</label>
+                        <input name="pwd" type="password" class="form-control" id="exampleInputPassword1"
+                            placeholder="">
+                    </div>
+                    <button routerLink="/inicio" type="submit" class="btn btn-primary">Enviar</button>
+                </form>
+
+                <!-- <?php Utils::borrarErrores();?> -->
+
+            </div>
+            <div class="imagen-log col-md-6">
+
+            </div>
+        </div>
+        <!-- <section class="Localizacion">
+            
+            <footer id="pie">
+                <p>Desarrollado por Disdev &copy 2020 </p>
+            </footer>
+        </section> -->
+    </section>
+
+
+
+<!-- </body> -->

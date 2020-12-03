@@ -1,0 +1,146 @@
+<!-- <?php
+
+session_start();
+require_once 'includes/conexion.php';
+include_once 'includes/helpers.php';
+require_once 'config/parameters.php';
+
+error_reporting(0);
+$carrito = $_SESSION['carrito'];   
+$libros = conseguirProductos($db); 
+
+?> -->
+
+<!-- <!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<header class="header-meditacion">
+         <?php require_once 'includes/menu.php'?>
+    </header> -->
+
+    <section class="main">
+        <div class="mostrar-carrito">
+            <h3>El carrito esta vacio, añade algun producto</h3>
+            <h1>Mi carrito</h1>
+            <hr>
+            <!-- <?php if(isset($_SESSION['carrito']) && count($_SESSION['carrito']) >= 1):?> -->
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th scope="col">IMAGEN</th>
+                        <th scope="col">NOMBRE</th>
+                        <th scope="col">UNIDADES</th>
+                        <th scope="col">PRECIO</th>
+                        <th scope="col">ACCION</th>
+                    </tr>
+                </thead>
+                <tbody>
+                <!-- <?php foreach($carrito as $indice => $elemento): 
+                    $producto = $elemento['producto'];
+                ?> -->
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td>
+                            
+                            
+                    
+                        </td>
+                        <td></td>
+                        <td></td>
+                        
+                    </tr>
+                <!-- <?php endforeach; ?> -->
+                </tbody>
+            </table>
+            
+            <br>
+            <hr>
+            
+            <div class="detalles-total">
+                <h3>Precio total: </h3>
+                <h3>Cantidad de unidades:</h3>
+                <a (click)="mostrarAlert()"><div class="boton-pedido">Hacer pedido</div></a>
+                <br>
+                <a ><div class="boton-pedido" style="background-color: #DB0074;">Vaciar pedido</div></a>
+            </div>
+        </div>
+                
+                    
+                
+        
+        <h1 style="margin-left: 25px;">Quisas te pueda interesar</h1>
+        <hr>
+
+
+        <div class="seccion-libros">
+            <section class="galeria-libros-paga">
+            <!-- <?php 
+            if(!empty($libros)):
+                while($libro = mysqli_fetch_assoc($libros)): 
+            ?> -->
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/como-ganar-amigos-e-influir-sobre-las-personas.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Como ganar amigos e influir entre las personas</p>
+                        <p>Dale Carnegie</p>
+                        <p class="libro-precio">$219</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/SIETEHABITOS.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Los siete habitos de la gente altamente efectiva</p>
+                        <p>Stephen R. Covey</p>
+                        <p class="libro-precio">$249</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/elhombre.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El hombre mas rico de babilonia</p>
+                        <p>George S. Clason</p>
+                        <p class="libro-precio">$259</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/elhombresentido.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El hombre en busca de sentido</p>
+                        <p>Victor Franki</p>
+                        <p class="libro-precio">$219</p>
+                    </div>
+                </div>
+            </a>
+                
+            <!-- <?php
+                endwhile;
+            endif;
+            ?> -->
+            </section>
+        </div>
+
+        <!-- <footer id="pie">
+                <p>Desarrollado por Disdev &copy 2020 </p>
+            </footer> -->
+    </section>
+

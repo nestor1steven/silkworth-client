@@ -1,0 +1,19 @@
+.iniciar-sesion{
+        width: 60%;
+        height: 300px;
+        margin: 130px 18%;
+        /* border: 1px solid black; */
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px -2px black;
+        .sidebar{
+
+        }
+        .imagen-log{
+            background-image: url('../../../assets/img/lina-trochez-ktPKyUs3Qjs-unsplash.jpg');
+            background-size: cover;
+            background-position: center 0;
+            background-repeat: no-repeat;
+            height: 300px;
+            border-radius: 0 10px 10px 0;
+        }
+    }

@@ -1,0 +1,78 @@
+.contenedor-logo-menu{
+    background-color: white;
+    width: 100%;
+    box-shadow: 0 5px 15px 2px #5E5E5E;
+    height: 70px;
+    
+    margin: unset;
+    .logo-silkworth{
+        a{
+            color: #2979CD;
+        }
+        font-size: 40px;
+        padding: 5px 0;
+        margin-left: 3%;
+        float: left;
+        text-decoration: none;
+    }
+    .opciones{
+        float: right;
+        min-width: 52%;
+        padding: 18px 0;
+        display: flex;
+        flex-direction: row-reverse;
+        li{
+            display: inline-flex;
+        }
+        a{
+            float: left;
+            font-size: 24px;
+            color: #DB0074;
+            margin-right: 40px;
+            font-weight: lighter;
+            text-decoration: none;
+        }:hover{
+            color: #EBAC11;
+        }
+    }
+}
+
+.opciones{
+    float: right;
+    min-width: 52%;
+    padding: 12px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    .stats{
+        text-align: center;
+    }
+    .img-carrito{
+        width: 30px;
+        height: 50px;
+    }
+    a{
+        display: block ruby;
+        font-size: 24px;
+        color: #DB0074;
+        margin-right: 5%;
+        font-weight: lighter;
+        text-decoration: none;
+        float: left;
+
+    }
+    a:hover{
+        color: #EBAC11;
+        
+    }
+    img{
+        margin-right: 5%;
+        &:hover{
+            transform: scale(1.3);
+        }
+    }
+    .btn{
+        display: block;
+        float: left;
+        margin-right: 3%;
+    }
+}

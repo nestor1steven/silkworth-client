@@ -1,0 +1,202 @@
+<!-- <?php
+
+session_start();
+require_once 'includes/conexion.php';
+include_once 'includes/helpers.php';
+require_once 'config/parameters.php';
+require_once 'helpers/utils.php';
+
+$carrito = $_SESSION['carrito'];   
+$libros = conseguirProductos($db); 
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<header class="header-meditacion">
+        <?php require_once 'includes/menu.php'?>
+</header> -->
+
+<section class="main">
+    <!-- <?php if(isset($_SESSION['identity'])):?> -->
+    <div class="titulos">
+        <h1>Hacer pedido</h1>
+        <hr>
+    </div>
+    <div class="hacer-pedido row">
+
+        <div class="form-pedido col-md-8">
+            <h3>Direcion de envio</h3>
+            <hr>
+            <form method="POST">
+
+                <div class="form-group" style="width: 100%;">
+                    <label for="calle">Calle*</label>
+                    <input type="text" class="form-control " name="calle">
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'calle') : '';?> -->
+                </div>
+                <div class="form-group">
+                    <label for="exterior">N° Exterior*</label>
+                    <input type="text" class="form-control " name="exterior">
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'exterior') : '';?> -->
+                </div>
+                <div class="form-group">
+                    <label for="colonia">Colonia*</label>
+                    <input type="text" class="form-control " name="colonia">
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'colonia') : '';?> -->
+                </div>
+                <div class="form-group">
+                    <label for="municipio">Delegacion / Municipio*</label>
+                    <input type="text" class="form-control " name="municipio">
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'municipio') : '';?> -->
+                </div>
+
+                <div class="form-group">
+                    <label for="cp">Codigo Postal*</label>
+                    <input type="text" class="form-control " name="cp">
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'cp') : '';?> -->
+                </div>
+
+                <div class="form-group">
+                    <label for="telefono">Telefono de contacto*</label>
+                    <input type="text" class="form-control " name="telefono">
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'telefono') : '';?> -->
+                </div>
+
+                <div class="form-group">
+                    <label for="estado">Estado*</label><br>
+                    <select name="estado" class="selectpicker" style="width: 100%;">
+                        <option value="no">Seleccione uno...</option>
+                        <option value="Aguascalientes">Aguascalientes</option>
+                        <option value="Baja California">Baja California</option>
+                        <option value="Baja California Sur">Baja California Sur</option>
+                        <option value="Campeche">Campeche</option>
+                        <option value="Chiapas">Chiapas</option>
+                        <option value="Chihuahua">Chihuahua</option>
+                        <option value="CDMX">Ciudad de México</option>
+                        <option value="Coahuila">Coahuila</option>
+                        <option value="Colima">Colima</option>
+                        <option value="Durango">Durango</option>
+                        <option value="Estado de México">Estado de México</option>
+                        <option value="Guanajuato">Guanajuato</option>
+                        <option value="Guerrero">Guerrero</option>
+                        <option value="Hidalgo">Hidalgo</option>
+                        <option value="Jalisco">Jalisco</option>
+                        <option value="Michoacán">Michoacán</option>
+                        <option value="Morelos">Morelos</option>
+                        <option value="Nayarit">Nayarit</option>
+                        <option value="Nuevo León">Nuevo León</option>
+                        <option value="Oaxaca">Oaxaca</option>
+                        <option value="Puebla">Puebla</option>
+                        <option value="Querétaro">Querétaro</option>
+                        <option value="Quintana Roo">Quintana Roo</option>
+                        <option value="San Luis Potosí">San Luis Potosí</option>
+                        <option value="Sinaloa">Sinaloa</option>
+                        <option value="Sonora">Sonora</option>
+                        <option value="Tabasco">Tabasco</option>
+                        <option value="Tamaulipas">Tamaulipas</option>
+                        <option value="Tlaxcala">Tlaxcala</option>
+                        <option value="Veracruz">Veracruz</option>
+                        <option value="Yucatán">Yucatán</option>
+                        <option value="Zacatecas">Zacatecas</option>
+                    </select>
+                    <!-- <?php echo isset($_SESSION['errores']) ? Utils::mostrarError($_SESSION['errores'],'estado') : '';?> -->
+                </div>
+
+                <div class="form-group" style="width: 100%;">
+                    <label for="referencias">Referencias del domicilio (opcional)</label>
+                    <input type="text" class="form-control " name="referencia">
+                </div>
+                <br>
+                <button routerLink="/pedido-confirmado" type="submit" class="btn btn-primary">Confirmar</button>
+            </form>
+            <!-- <?php Utils::borrarErrores();?> -->
+        </div>
+
+        <div class="resumen-compra col-md-4">
+            <h1>Resumen de compra</h1>
+            <hr>
+            <h3>Precio total: $365</h3>
+            <h3>Cantidad de unidades: 2</h3>
+            <a routerLink="/mostrar_carrito">ver productos y precio del pedido</a>
+        </div>
+        
+
+        <div class="quisas-interesar row">
+            <div class="seccion-libros col-md-12" style="width: 100%;">
+                <h2>Quisas te pueda interesar</h2>
+                <hr>
+                <section class="galeria-libros-paga">
+                    <!-- <?php 
+            if(!empty($libros)):
+                while($libro = mysqli_fetch_assoc($libros)): 
+            ?> -->
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/como-ganar-amigos-e-influir-sobre-las-personas.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Como ganar amigos e influir entre las personas</p>
+                        <p>Dale Carnegie</p>
+                        <p class="libro-precio">$219</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/dios-nunca-parpadea.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Dios nunca parpadea</p>
+                        <p>Regina Brett</p>
+                        <p class="libro-precio">$159</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/SIETEHABITOS.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Los siete habitos de la gente altamente efectiva</p>
+                        <p>Stephen R. Covey</p>
+                        <p class="libro-precio">$249</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/elhombresentido.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El hombre en busca de sentido</p>
+                        <p>Victor Franki</p>
+                        <p class="libro-precio">$219</p>
+                    </div>
+                </div>
+            </a>
+
+                    <!-- <?php
+                endwhile;
+            endif;
+            ?> -->
+                </section>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <footer id="pie">
+    <p>Desarrollado por Disdev &copy 2020 </p>
+</footer>
+
+
+
+</body> -->

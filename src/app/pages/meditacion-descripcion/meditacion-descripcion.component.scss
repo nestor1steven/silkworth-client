@@ -1,0 +1,81 @@
+.header-libros-descripcion{
+    background-color: white;
+    .bloque-descripcion-libros{
+        margin: 4.759% 14.642%;
+        margin-bottom: 0px;
+        img{
+            width: 100%;
+            height: 450px;
+            margin-bottom: 64px;
+        }
+        .info-libro{
+            width: 100%;
+            height: 100px;
+            background-color: #db007585;
+            h2{
+                color: white;
+                font-size: 18px;
+                text-align: center;
+                padding-top: 10px;
+            }
+            p{
+                padding: 10px;
+                width: 50%;
+                height: auto;
+                float: left;
+                font-weight: bold;
+                font-size: 14px;
+            }
+        }
+        .sinopsis{
+            width: 100%;
+            height: 350px;
+            background-color: #ebad117e;
+            h2{
+                color: white;
+                font-size: 18px;
+                text-align: center;
+                padding-top: 10px;
+            }
+            p{
+                text-align: center;
+                padding: 10px;
+                height: auto;
+                width: 100%;
+                font-size: 14px;
+                font-weight: bold;
+            }
+        }
+        .libro-precio-anadir{
+             width: 100%;
+             height: 450px;
+             background-color: #38babc7c;
+             text-align: center;
+             padding-top: 130px;
+             .precio{
+                color: black;
+                font-size: 30px;
+             }
+             .stock{
+                 color: #299E00;
+                 font-size: 18px;
+             }
+             .boton-anadir{
+                background-color: #DB0074;
+                width: 62.9%;
+                height: 40px;
+                border-radius: 3px;
+                padding: 3%;
+                margin-left: 18%;
+                 .anadir{
+                     color: white;
+                     font-size: 16px;
+                 }
+             }
+             .tambien-disponible{
+                 color: white;
+                 font-size: 10px;
+             }
+        }
+    }
+}

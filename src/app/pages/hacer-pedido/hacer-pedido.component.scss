@@ -1,0 +1,102 @@
+.hacer-pedido{
+    margin: 0px;
+    .form-group{
+        width: 40%;
+        float: left;
+        margin-right: 10%;
+    }
+    .form-pedido{
+        margin: 0 15px;
+        margin-bottom: 30px;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, 0.2);
+        .form-group{
+            .alerta-error{
+                width: 100%;
+                text-align: center;
+                background-color: #DB0074;
+                border-radius: 10px;
+                margin-top: 5px;
+                color: white;
+            }
+        }
+    }
+    .resumen-compra{
+        padding: 20px 0;
+        position: fixed;
+        left: 900px;
+        text-align: center;
+        top: 80px;
+        width: 30%;
+        margin: 0 3%;
+        h1{
+            color: #DB0074;
+        }
+    }
+    .quisas-interesar{
+        .seccion-libros{
+            h2{
+                margin-left: 2%;
+            }
+        }
+    }
+}
+
+.titulos{
+    padding: 30px;
+}
+
+.seccion-libros{
+    width: 80%;
+    margin: 0 auto;
+    .galeria-libros-paga{
+        margin-bottom: 40px;
+        display: flex;
+        text-decoration: none;
+
+        flex-direction: none;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        a{
+
+            text-decoration: none;
+            margin: 25px 1.899%;
+            .bloque-libro{
+            transition: 1.5s ease;
+                -moz-transition: 1.5s ease;
+                img{
+                    width: 180px;
+                    max-width: 180px;
+                    height: 254px;
+                }
+                .titulo-autor-precio{
+                    width: 180px;
+                    height: 90px;
+                    max-width: 180px;
+                    color: white;
+                    box-shadow: 0 10px 14px 5px #54545454;
+                    p{
+                        color: black;
+                        font-size: 12px;
+                        text-align: center;
+                        margin-bottom: 0;
+                        font-weight: bold;
+                        margin-top: 5px;
+                    }
+                    .libro-precio{
+                        color: #DB0074;
+                        font-size: 16px;
+                        text-align: center;
+                        margin-bottom: 0;
+                        font-weight: bold;
+                        
+                    }
+                }
+                &:hover{
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}

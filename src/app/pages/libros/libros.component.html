@@ -1,0 +1,247 @@
+<header class="header-libros">
+    <!-- <?php require_once 'includes/menu.php'?> -->
+        <div class="bloque-img-libros">
+            <p>LIBROS DE <br>AUTOAYUDA</p>
+        </div>
+    </header>
+<section class="main">
+
+    <div class="titulo-libros-gratuito">
+        <p>Libros gratuitos</p>
+        <hr>
+    </div>
+    <section class="galeria-libros row">
+        <div class="col-md-3">
+            <a href="libros-descripcion.php">
+                <div class="bloque-libro">
+
+                    <img src="./assets/img/libros/DESPERTANDOG.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>DESPERTANDO AL GIGANTE INTERIOR</p>
+                        <p>ROBBINS, ANTHONY</p>
+                        <p class="libro-precio">GRATIS</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+        <div class="col-md-3">
+            <a href="">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/cienciarico.jpg" alt="">
+                    <div class="titulo-autor-precio">
+                        <p>LA CIENCIA DE HACERSE RICO</p>
+                        <p>REDACTORES EN RED</p>
+                        <p class="libro-precio">GRATIS</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/secretosmillonaria.JPG" alt="">
+                    <div class="titulo-autor-precio">
+                    <p>SECRETOS DE LA MENTE MILLONARIA</p>
+                        <p>EKER, HARV</p>
+                        <p class="libro-precio">GRATIS</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/podervulnerable.JPG" alt="">
+                    <div class="titulo-autor-precio">
+                        <p>PODER DE SER VULNERABLE</p>
+                        <p>BROWN, BRENE</p>
+                        <p class="libro-precio">GRATIS</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </section>
+    <div class="titulo-libros-gratuito">
+        <p>Libros de paga</p>
+        <hr>
+    </div>
+
+    
+    <div class="seccion-libros">
+        <section class="galeria-libros-paga">
+        <!-- <?php 
+        if(!empty($libros)):
+            while($libro = mysqli_fetch_assoc($libros)): 
+        ?> -->
+            <!-- <a href="libros-descripcion.php?id=<?=$libro['id']?>"> -->
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/DESPERTANDOG.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Despertando al gigante interior</p>
+                        <p>Anthony Robbins</p>
+                        <p class="libro-precio">$<!-- <?=$libro['precio']?> --></p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/SIETEHABITOS.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Los siete habitos de la gente altamente efectiva</p>
+                        <p>Stephen R. Covey</p>
+                        <p class="libro-precio">$249</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/the-ego-is-the-enemy.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El ego es el enemigo</p>
+                        <p>Ryan Holiday</p>
+                        <p class="libro-precio">$359</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/como-ganar-amigos-e-influir-sobre-las-personas.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Como ganar amigos e influir entre las personas</p>
+                        <p>Dale Carnegie</p>
+                        <p class="libro-precio">$219</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/dios-nunca-parpadea.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Dios nunca parpadea</p>
+                        <p>Regina Brett</p>
+                        <p class="libro-precio">$159</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/elhombre.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El hombre mas rico de babilonia</p>
+                        <p>George S. Clason</p>
+                        <p class="libro-precio">$259</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/elhombresentido.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El hombre en busca de sentido</p>
+                        <p>Victor Franki</p>
+                        <p class="libro-precio">$219</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/el-poder-del-ahora.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El poder del ahora</p>
+                        <p>Eckhard Tolle</p>
+                        <p class="libro-precio">$369</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/el-poder-del-pensamiento-positivo.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El poder del pensamiento positivo</p>
+                        <p>Norman Vicent Peale</p>
+                        <p class="libro-precio">$179</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/elsecreto.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El secreto</p>
+                        <p>Rhonda Braine</p>
+                        <p class="libro-precio">$350</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/ferrari.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El monje que vendio su ferrari</p>
+                        <p>Robin S. Sharma</p>
+                        <p class="libro-precio">$109</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/padre.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Padre rico padre pobre</p>
+                        <p>Robert T. Kiyosaki</p>
+                        <p class="libro-precio">$319</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/pienserico.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Piense y hágase rico</p>
+                        <p>Napoleon Hill</p>
+                        <p class="libro-precio">$309</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/podervulnerable.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>El poder de ser vulnerable</p>
+                        <p>Brene Brown</p>
+                        <p class="libro-precio">$289</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/sanarvida.jpg" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Tu puedes sanar tu vida</p>
+                        <p>Louise L. Hay</p>
+                        <p class="libro-precio">$209</p>
+                    </div>
+                </div>
+            </a>
+            <a routerLink="/libros-descripcion">
+                <div class="bloque-libro">
+                    <img src="./assets/img/libros/secretosmillonaria.JPG" alt="Imagen libro">
+                    <div class="titulo-autor-precio">
+                        <p>Los secretos de la mente millonaria</p>
+                        <p>T. Harv Eker</p>
+                        <p class="libro-precio">$259</p>
+                    </div>
+                </div>
+            </a>
+    
+            
+        <!-- <?php
+            endwhile;
+        endif;
+        ?> -->
+        </section>
+    </div>
+    
+</section>

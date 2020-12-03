@@ -1,0 +1,53 @@
+<!-- <?php require_once 'includes/conexion.php'?>
+<?php require_once 'includes/helpers.php'?>
+<?php require_once 'autoload.php';?>
+<?php require_once 'config/db.php';?>
+<?php require_once 'config/parameters.php'?>
+
+<?php error_reporting(0); $libros = conseguirLibro($db, $_GET['id']); 
+
+if(!isset($libros['id'])){
+    header("Location: libros.php");
+}
+?> -->
+
+<header class="header-libros-descripcion">
+    <!-- <?php require_once 'includes/menu.php'?> -->
+        <div class="bloque-descripcion-libros row sinpadding">
+        
+            <div class="col-md-4" style="padding-left: 0px;padding-right: 0px; padding-left: 0px;
+            padding-right: 0px;  ">
+                <img src="./assets/img/libros/SIETEHABITOS.JPG" alt="Imagen-libro">
+            </div>
+            <div class="col-md-5" style="
+            padding-left: 0px;
+            padding-right: 0px;">
+                
+                <div class="info-libro ">
+                    <h2>Los siete habitos de la gente altamente efectiva</h2>
+                        <p>Codigo de articulo: 18524<br> Editorial: Paidos</p>
+                        <p>Duración: 350 paginas</p>
+                </div>
+                <div class="sinopsis mce-text-center">
+                    <h2>Sinopsis</h2>
+                    <p>Básicamente, nuestro carácter está compuesto por nuestros hábitos. Los hábitos son factores poderosos en nuestras vidas. Dado que son pautas consistentes, a menudo inconscientes, de modo constante y cotidiano expresan nuestro carácter y generan nuestra efectividad... o inefectividad.</p>
+                </div>
+            </div>
+            <div class="col-md-3" style="
+            padding-left: 0px;
+            padding-right: 0px;">
+                <div class="libro-precio-anadir">
+                    <p class="precio">$350</p>
+                    <p class="stock">En stock 15</p>
+                    <a (click)="mostrarAlert()">
+                    <!-- <a href="http://localhost/master-php/silkworth/carrito/add&id=<?=$libros['id']?>"> -->
+                        <div class="boton-anadir">
+                            <p class="anadir">Añadir al carrito</p>
+                        </div>
+                    </a>
+                    <p class="tambien-disponible">También disponible en ePub</p>
+                </div>
+            </div>
+        
+        </div>
+    </header>

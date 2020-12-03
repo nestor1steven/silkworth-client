@@ -1,0 +1,137 @@
+
+.row{
+    margin: 0;
+}
+
+.header-psicologia{
+    background-image: url(../../../assets/img/kal-visuals-aK4iPNYipnU-unsplash.jpg);
+    background-size: cover;
+    background-position: center 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    max-width: 1349px;
+    .bloque-frases-psicologia{
+        position: absolute;
+        top: 100px;
+        left: 1000px;
+        p{
+            color: white;
+            font-size: 50px;
+        }
+    }
+    .imagen{
+        width: 100%;
+        height: 550px;
+    }
+}
+
+.cita{
+    padding: 150px 0;
+    .informacion-imagen{
+        .row{
+            margin: 0;
+        }
+        .imagen-psicologa{
+            background-image: url(../../../assets/img/dan-ROJFuWCsfmA-unsplash.jpg);
+            background-size: cover;
+            background-position: center 0;
+            background-repeat: no-repeat;
+            border-radius: 0 80px 80px 0;
+            width: 100%;
+            height: 400px;
+        }
+        h2{
+            color: #DB0074;
+            font-size: 50px;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        p{
+            color: black;
+            font-size: 24px;
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 0 5%;
+        }
+        .boton-agendar{
+            width: 65%;
+            background-color: #EBAC11;
+            border-radius: 10px;
+            margin-left: 16%;
+            h3{
+                color: white;
+                font-size: 30px;
+                text-align: center;
+            }
+        }
+    }
+}
+.paquetes{
+    h2{
+        color: #DB0074;
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 70px;
+    }
+    .bloques-paquetes{
+        width: 100%;
+        height: 550px;
+        padding: 0 14.827%;
+        margin-bottom: 70px;
+        text-align: center;
+    }
+    .caja-azul{
+        width: 100%;
+        background-color: #2979CD;
+        height: 500px;
+        margin: 25px 0;
+        padding: 5%;
+        hr{
+            background-color: white;
+        }
+        .boton-anadir{
+            position: absolute;
+            width: 50%;
+            height: 50px;
+            background-color: #DB0074;
+            color: white;
+            bottom: 50px;
+            left: 25%;
+            padding: 2.3%;
+            p{
+                font-size: 25px;
+            }
+        }
+    }
+    .caja-amarilla{
+        width: 100%;
+        background-color: #EBAC11;
+        height: 100%;
+        padding: 5%;
+        hr{
+            background-color: black;
+            color: white;
+        }
+        .boton-anadir{
+            position: absolute;
+            width: 50%;
+            height: 50px;
+            background-color: #DB0074;
+            color: white;
+            bottom: 25px;
+            left: 25%;
+            padding: 2.3%;
+            p{
+                font-size: 25px;
+            }
+        }
+        p{
+            color: white;
+        }
+    }
+    
+    h3{
+        color: black;
+        font-size: 40px;
+    }
+}

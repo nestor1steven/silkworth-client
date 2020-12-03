@@ -1,0 +1,135 @@
+<!-- <?php
+
+session_start();
+require_once 'config/db.php';
+require_once 'includes/conexion.php';
+include_once 'includes/helpers.php';
+require_once 'config/parameters.php';
+require_once 'helpers/utils.php';
+require_once 'models/pedido.php';
+
+if(isset($_SESSION['identity'])){
+    $identity = $_SESSION['identity']; 
+    $pedido = new Pedido();
+    $pedido->setUsuario_id($identity->id);
+    $pedido = $pedido->getOneByUser();
+
+    $_SESSION['pedido_detalles'] = $pedido;
+    
+    $pedido_productos = new Pedido();
+    $productos = $pedido_productos->getProductosByPedido($pedido->id);
+
+    $_SESSION['pedido_detalles_producto'] = $productos;
+}
+
+$carrito = $_SESSION['carrito'];   
+$libros = conseguirProductos($db); 
+
+?>
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto</title>
+    <link rel="stylesheet" type="text/css" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<header class="header-meditacion">
+        <?php require_once 'includes/menu.php'?>
+    </header> -->
+
+<section class="main">
+    <div class="caja-confirm">
+        <!-- <?php if(isset($_SESSION['pedido']) && $_SESSION['pedido'] == 'complete'): ?> -->
+        <h1>Tu pedido se a confirmado</h1>
+        <hr>
+        <p>Tu pedido ha sido guardado con exito, una ves que realices la transferencia
+            bancaria a la cuenta 5542 8242 3541 2563 con el coste del pedido o tranfiere el monto total a nuestra cuenta
+            de paypal, sera procesado y enviado.
+        </p>
+        
+        <h3>Datos del pedido</h3>
+        <p>
+            Numero de pedido: 465424<br>
+            Total a pagar: $365<br>
+            Productos:
+        </p>
+
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">IMAGEN</th>
+                    <th scope="col">NOMBRE</th>
+                    <th scope="col">UNIDADES</th>
+                    <th scope="col">PRECIO</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- <?php while($producto = $productos->fetch_object()):
+                ?> -->
+
+                <tr>
+                    <td><img src="./assets/img/libros/SIETEHABITOS.JPG" style="width: 10%;"></td>
+                    <td><a
+                            href="http://localhost/master-php/silkworth/libros-descripcion.php?id=<?=$producto->id?>">Los siete habitos de la gente altamente efectiva</a>
+                    </td>
+                    <td>1</td>
+                    <td>$349</td>
+
+                </tr>
+                <tr>
+                    <td><img src="./assets/img/musica/sleepsong.jpg" style="width: 10%;"></td>
+                    <td><a
+                            href="http://localhost/master-php/silkworth/libros-descripcion.php?id=<?=$producto->id?>">Sleep Song Meditation</a>
+                    </td>
+                    <td>1</td>
+                    <td>$15</td>
+
+                </tr>
+                <!-- <?php endwhile; ?> -->
+            </tbody>
+        </table>
+        
+        <!-- <?php endif;?> -->
+        <div id="paypal-button-container"></div>
+        <script src="https://www.paypal.com/sdk/js?client-id=sb&currency=MXN"
+            data-sdk-integration-source="button-factory"></script>
+        <script>
+            paypal.Buttons({
+                style: {
+                    shape: 'pill',
+                    color: 'gold',
+                    layout: 'vertical',
+                    label: 'pay',
+
+                },
+                createOrder: function (data, actions) {
+                    return actions.order.create({
+                        purchase_units: [{
+                            amount: {
+                                value: '1'
+                            }
+                        }]
+                    });
+                },
+                onApprove: function (data, actions) {
+                    return actions.order.capture().then(function (details) {
+                        alert('Transaction completed by ' + details.payer.name.given_name + '!');
+                    });
+                }
+            }).render('#paypal-button-container');
+        </script>
+    </div>
+
+</section>
+
+
+<!-- 
+</body> -->

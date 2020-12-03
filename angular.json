@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "silkworth-client"
+  "defaultProject": "silkworth-client",
+  "cli": {
+    "analytics": "846da11a-7681-4156-8b0d-e302609bd8ed"
+  }
 }

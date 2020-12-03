@@ -1,0 +1,53 @@
+<div class="seccion-libros">
+    <section class="galeria-libros-paga">
+    <!-- <?php 
+    if(!empty($libros)):
+        while($libro = mysqli_fetch_assoc($libros)): 
+    ?> -->
+    <a routerLink="/libros-descripcion">
+        <div class="bloque-libro">
+            <img src="./assets/img/libros/SIETEHABITOS.JPG" alt="Imagen libro">
+            <div class="titulo-autor-precio">
+                <p><!-- <?=$libro['titulo']?> --></p>
+                <p><!-- <?=$libro['autor']?> --></p>
+                <p class="libro-precio">$<!-- <?=$libro['precio']?> --></p>
+            </div>
+        </div>
+    </a>
+    <a routerLink="/libros-descripcion">
+        <div class="bloque-libro">
+            <img src="./assets/img/libros/the-ego-is-the-enemy.jpg" alt="Imagen libro">
+            <div class="titulo-autor-precio">
+                <p><!-- <?=$libro['titulo']?> --></p>
+                <p><!-- <?=$libro['autor']?> --></p>
+                <p class="libro-precio">$<!-- <?=$libro['precio']?> --></p>
+            </div>
+        </div>
+    </a>
+    <a routerLink="/libros-descripcion">
+        <div class="bloque-libro">
+            <img src="./assets/img/libros/como-ganar-amigos-e-influir-sobre-las-personas.jpg" alt="Imagen libro">
+            <div class="titulo-autor-precio">
+                <p><!-- <?=$libro['titulo']?> --></p>
+                <p><!-- <?=$libro['autor']?> --></p>
+                <p class="libro-precio">$<!-- <?=$libro['precio']?> --></p>
+            </div>
+        </div>
+    </a>
+    <a routerLink="/libros-descripcion">
+        <div class="bloque-libro">
+            <img src="./assets/img/libros/dios-nunca-parpadea.jpg" alt="Imagen libro">
+            <div class="titulo-autor-precio">
+                <p><!-- <?=$libro['titulo']?> --></p>
+                <p><!-- <?=$libro['autor']?> --></p>
+                <p class="libro-precio">$<!-- <?=$libro['precio']?> --></p>
+            </div>
+        </div>
+    </a>
+        
+    <!-- <?php
+        endwhile;
+    endif;
+    ?> -->
+    </section>
+</div>
